@@ -24,7 +24,7 @@ fi
 
 # 解压文件到 Typora 安装目录
 echo "正在解压文件到 $TYPORA_PATH..."
-unrar x "$TEMP_RAR" -d "$TYPORA_PATH"
+unrar x "$TEMP_RAR" "$TYPORA_PATH/"
 if [ $? -ne 0 ]; then
   echo "解压失败，请检查 unrar 是否正确安装或压缩文件是否正确。"
   rm -f "$TEMP_RAR"
