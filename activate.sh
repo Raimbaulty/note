@@ -21,7 +21,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # 静默解压文件到 Typora 安装目录
-unrar x -inul "$TEMP_RAR" "$TYPORA_PATH/"
+unrar e -inul "$TEMP_RAR" "$TYPORA_PATH/"
 if [ $? -ne 0 ]; then
   echo "解压失败，请检查 unrar 是否正确安装或压缩文件是否正确。"
   rm -f "$TEMP_RAR"
